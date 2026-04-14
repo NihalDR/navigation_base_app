@@ -8,12 +8,11 @@ class DetailPage extends StatelessWidget {
       : super(key: key);
 
   static const DETAIL_PAGE = '/Detail Page';
-  String title, path, description;
-  Places places;
+  final String title, path, description;
 
   @override
   Widget build(BuildContext context) {
-    places =
+    Places places =
         Places(placeTitle: title, placeSubTitle: description, placePath: path);
     return Scaffold(
       appBar: AppBar(

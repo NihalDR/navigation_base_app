@@ -8,13 +8,12 @@ class TagHero extends StatelessWidget {
   TagHero({Key key, this.title, this.path}) : super(key: key);
 
   static const TAG_HERO_CLASS = '/TAG_HERO_CLASS';
-  String title, path;
+  final String title, path;
   static const HERO_TAG = 'TAG';
-  Places places;
 
   @override
   Widget build(BuildContext context) {
-    places = Places(placeTitle: title, placePath: path);
+    Places places = Places(placeTitle: title, placePath: path);
     return Scaffold(
       appBar: AppBar(
         title: Text(title),

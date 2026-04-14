@@ -6,8 +6,8 @@ class GridViewHeroReceiver extends StatelessWidget {
    GridViewHeroReceiver({Key key, this.index, this.path}) : super(key: key);
 
    static const  GridView_Hero_Receiver = '/GridViewHeroReceiver';
-  final index;
-  String path;
+  final int index;
+  final String path;
 
   @override
   Widget build(BuildContext context) {

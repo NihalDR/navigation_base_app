@@ -186,6 +186,12 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   List<Places> placesList = <Places>[];
 
+  @override
+  void initState() {
+    super.initState();
+    addPlaces();
+  }
+
   void addPlaces() {
     placesList.add(Places(
       placeTitle: 'South Island',
@@ -291,7 +297,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    addPlaces();
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
@@ -315,7 +320,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: ListView.builder(
-          itemCount: 20,
+          itemCount: placesList.length,
           padding: const EdgeInsets.all(5),
           itemBuilder: (context, index) {
             return Neumorphic(
