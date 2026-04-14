@@ -21,7 +21,7 @@ To run this project, ensure you have [Flutter](https://docs.flutter.dev/get-star
    flutter run
    ```
 
-## GIF
+## DEMO
 
 <p align="center">
   <img 
