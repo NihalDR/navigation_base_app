@@ -6,8 +6,7 @@ import 'package:navigation_base_app/scenes.dart';
 class MyHeroAnimation extends StatelessWidget {
    MyHeroAnimation({Key key, this.title, this.path}) : super(key: key);
 
-  final path, title;
-  Places places;
+  final String path, title;
   static const MY_HERO_ANIMATION_TAG = '/hero_animation_tag';
   static String MY_HERO_ANIMATION_SECOND_TAG = '/hero_animation_second_tag';
 
@@ -74,7 +73,7 @@ class MyHeroAnimation extends StatelessWidget {
                               );
                             },*/
                             onTap: () {
-                              places = Places(index: index, placePath: path);
+                              Places places = Places(index: index, placePath: path);
                               Navigator.pushNamed(context, GridViewHeroReceiver.GridView_Hero_Receiver, arguments: places);
                             },
                             child: Hero(

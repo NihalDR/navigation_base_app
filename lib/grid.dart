@@ -6,12 +6,11 @@ class CustomGridView extends StatelessWidget {
   CustomGridView({Key key, this.title, this.path}) : super(key: key);
 
   static const GRID_VIEW = '/GridPage';
-  String path, title;
-  Places places;
+  final String path, title;
 
   @override
   Widget build(BuildContext context) {
-    places = Places(placeTitle: title, placePath: path);
+    Places places = Places(placeTitle: title, placePath: path);
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
